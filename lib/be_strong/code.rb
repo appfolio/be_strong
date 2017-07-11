@@ -2,7 +2,7 @@ module BeStrong
   class Code
     include Comparable
 
-    REG_MASS_ASSIGNMENT_METHOD = /((new|build|build_.*|update|update!|assign_attributes|update_attributes|update_attributes!)([\( )])params\[:(\w*)\]([\( )]))/
+    REG_MASS_ASSIGNMENT_METHOD = /((new|build|build_.*|update|update!|assign_attributes|update_attributes|update_attributes!|attributes =)([\( )])params\[:(\w*)\]([\( )]))/
 
     def initialize(code)
       @code     = code
