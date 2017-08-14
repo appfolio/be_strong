@@ -15,7 +15,7 @@ module BeStrong
         code = Code.new(buf).remove_attr_accessible_and_protected!
         return false unless code.changed?
 
-        File.open(file, 'w'){|f| f.puts(code.to_str)}
+        File.open(file, 'w'){|f| f.puts(code.to_s)}
         true
       end
     end
